@@ -37,6 +37,8 @@ class _MyAppState extends State<MyApp> {
                   hebrewDateFormatter.formatWeeklyParsha(jewishCalendar)),
               Text('Translated Hebrew Date: ' +
                   translatedDateFormatter.format(jewishDate)),
+              Text('getJewishMonthOfYear: ' + JewishDate.getJewishMonthOfYear(5662, 1).toString()),
+              Text('getJewishMonthOfYear: ' + JewishDate.getJewishMonthOfYear(5661, 12).toString()),
               Text('Parasha of the week: ' +
                   translatedDateFormatter.formatWeeklyParsha(jewishCalendar)),
             ],

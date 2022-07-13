@@ -556,7 +556,7 @@ class JewishDate implements Comparable<JewishDate> {
   static double _getChalakimSinceMoladTohu(int year, int month) {
     // Jewish lunar month = 29 days, 12 hours and 793 chalakim
     // chalakim since Molad Tohu BeHaRaD - 1 day, 5 hours and 204 chalakim
-    int monthOfYear = _getJewishMonthOfYear(year, month);
+    int monthOfYear = getJewishMonthOfYear(year, month);
     int monthsElapsed = ((235 *
             ((year - 1) ~/
                 19)) // Months in complete 19 year lunar (Metonic) cycles so far
@@ -587,7 +587,7 @@ class JewishDate implements Comparable<JewishDate> {
   /// @param month
   ///            The Jewish Month
   /// @return the Jewish month of the year starting with Tishrei
-  static int _getJewishMonthOfYear(int year, int month) {
+  static int getJewishMonthOfYear(int year, int month) {
     bool isLeapYear = _isJewishLeapYear(year);
     return (month + (isLeapYear ? 6 : 5)) % (isLeapYear ? 13 : 12) + 1;
   }
